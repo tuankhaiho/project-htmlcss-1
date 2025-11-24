@@ -49,7 +49,16 @@ a {
 }
 
 /* Hearder */
-.header {
+.fixed-header {
+    background-color: #e6f0ff;
+    padding-top: 26px;
+    position: sticky;
+    top: -26px;
+    z-index: 1;
+}
+
+.hero-wrap {
+    display: flex;
     position: relative;
     background: #e6f0ff;
     height: 100vh;
@@ -58,7 +67,8 @@ a {
 .navbar {
     display: flex;
     align-items: center;
-    padding: 38px 0;
+    padding: 12px 0;
+    /* padding: 38px 0; */
 }
 
 .navbar ul {
@@ -166,7 +176,19 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 96px;
+    margin-top: 70px;
+}
+
+.clients .images a {
+    display: flex;
+    align-items: center;
+    padding: 0 42px;
+    height: 90px;
+    border-radius: 12px;
+}
+
+.clients .images a:hover {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 /* Guides */
@@ -597,6 +619,10 @@ a {
     width: 28px;
     height: 28px;
     border-radius: 3px;
+}
+
+.footer .social-link + .social-link {
+    margin-left: 16px;
 }
 
 .footer .social-link:hover {
