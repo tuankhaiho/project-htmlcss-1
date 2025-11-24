@@ -4,6 +4,12 @@
 :root {
     --primary-color: #0f1b4c;
 }
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -50,7 +56,7 @@ a {
 
 /* Hearder */
 .fixed-header {
-    background-color: #e6f0ff;
+    background: #e6f0ff;
     padding-top: 26px;
     position: sticky;
     top: -26px;
@@ -58,10 +64,12 @@ a {
 }
 
 .hero-wrap {
-    display: flex;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: #e6f0ff;
-    height: 100vh;
+    height: calc(100vh - 90px);
 }
 
 .navbar {
@@ -103,13 +111,7 @@ a {
     border-radius: 8px;
 }
 
-.hero {
-    margin-top: 130px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.hero .sub-title {
+.hero-wrap.sub-title {
     color: #687690;
     font-size: 1.8rem;
     font-weight: 500;
@@ -117,7 +119,7 @@ a {
     letter-spacing: 0.01em;
 }
 
-.hero .title {
+.hero-wrap .title {
     margin-top: 8px;
     color: #000336;
     font-size: 6.2rem;
@@ -125,11 +127,11 @@ a {
     line-height: 1.19;
 }
 
-.hero .info {
+.hero-wrap .info {
     width: 51%;
 }
 
-.hero .desc {
+.hero-wrap .desc {
     margin-top: 30px;
     color: #5a6473;
     font-size: 1.8rem;
@@ -145,7 +147,6 @@ a {
 .hero-img {
     position: absolute;
     right: calc((100vw - 1110px) / 2 - 100px);
-    width: 40%;
     bottom: 0;
 }
 
